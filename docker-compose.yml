@@ -3,9 +3,8 @@ services:
     build:
       context: .
       target: runner
-    ports:
-      - "3000:3000"
     environment:
+      - SERVICE_FQDN_FRONTEND_3000
       - APP_PASSWORD=${APP_PASSWORD}
       - CLINICA_API_KEY=${CLINICA_API_KEY}
       - JWT_SECRET=${JWT_SECRET}
